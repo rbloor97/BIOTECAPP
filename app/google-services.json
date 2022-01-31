@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "363201554007",
+    "project_id": "biotec-app",
+    "storage_bucket": "biotec-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363201554007:android:1c6bd7ee6de88cc0a76512",
+        "android_client_info": {
+          "package_name": "com.biotec.biotec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363201554007-vjcr7hl42ngjb3g36lrgqkpd1kge5imi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApZcjfpA7tLbOKR2qnANlCTqnNr1EOEUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363201554007-vjcr7hl42ngjb3g36lrgqkpd1kge5imi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

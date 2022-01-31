@@ -30,6 +30,7 @@
 
 
             <LinearLayout
+                android:id="@+id/ll_consultar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
@@ -67,6 +68,7 @@
 
 
             <LinearLayout
+                android:id="@+id/ll_registrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="colorPrimaryDark">#003A77</item>
+        <item name="colorPrimary">#032A57</item>
+        <item name="colorAccent">#01661B</item>
+        <item name="textInputStyle">@style/TextInputLayout</item>
+        <item name="chipStyle">@style/ChipStyle</item>
+        <item name="materialButtonStyle">@style/materialButton</item>
+    </style>
+    <style name="materialButton" parent="@style/Widget.MaterialComponents.Button">
+        <item name="backgroundColor">#003A77</item>
+        <item name="buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">5dp</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxCornerRadiusTopEnd">5dp</item>
+        <item name="boxBackgroundColor">#FFF</item>
+    </style>
+
+    <style name="ChipStyle" parent="@style/Widget.MaterialComponents.Chip.Action">
+        <item name="android:checkable">true</item>
+    </style>
+</resources>
