@@ -1,9 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.BIOCTEN" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="colorPrimaryDark">#003A77</item>
+        <item name="colorPrimaryDark">#01661B</item>
+        <item name="colorPrimary">#008000</item>
+        <item name="colorAccent">#01906E</item>
+        <!--<item name="colorPrimaryDark">#003A77</item>
         <item name="colorPrimary">#032A57</item>
-        <item name="colorAccent">#01661B</item>
+        <item name="colorAccent">#01661B</item>-->
         <item name="textInputStyle">@style/TextInputLayout</item>
         <item name="chipStyle">@style/ChipStyle</item>
         <item name="materialButtonStyle">@style/materialButton</item>

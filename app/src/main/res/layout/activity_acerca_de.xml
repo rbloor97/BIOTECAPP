@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="8dp"
+        android:src="@drawable/logo_babahoyo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:textSize="20dp"
+
+        android:textAlignment="center"
+        android:text="La aplicación ControlVet-7B fue desarrollada para la
+            gestión y control del ganado, como parte de un proyecto final del curso de
+             Biotecnología paralelo 7B" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="2022 © Universidad Técnica de Babahoyo - Facultad de Ciencias Agropecuarias (FACIAG)"
+
+        android:textSize="15dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

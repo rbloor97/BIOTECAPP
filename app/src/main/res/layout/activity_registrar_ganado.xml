@@ -6,6 +6,9 @@
     android:orientation="vertical"
     android:padding="8dp">
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,6 +22,7 @@
             android:paddingTop="15dp">
 
             <ImageView
+                android:id="@+id/iv_registrarGanado"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:src="@drawable/icon_picture_add"/>
@@ -35,18 +39,34 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tie_codigo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:maxLength="10"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_codigoMAGAD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Código MAGAD">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_codigoMAGAD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="10"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Especie"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp" />
         <Spinner
             android:id="@+id/sp_especie"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:entries="@array/especie"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,51 +75,238 @@
         <Spinner
             android:id="@+id/sp_raza"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Genero"
-            android:layout_marginTop="8dp"/>
-        <Spinner
-            android:id="@+id/sp_genero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
+            android:entries="@array/raza"/>
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_fechaInicio"
+            android:id="@+id/til_razaOtro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="Fecha">
+            android:hint="Otra raza">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tie_fechaInicio"
+            android:id="@+id/tie_razaOtro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Genero"/>
+        <CheckBox
+            android:id="@+id/cb_macho"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Macho"/>
+        <CheckBox
+            android:id="@+id/cb_hembra"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hembra"/>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_fechaNacimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Fecha de nacimiento">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_fechaNacimiento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_marginTop="8dp"
-        android:layout_height="wrap_content">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btncancel"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="5"
-            android:layout_marginEnd="5dp"
-            android:text="CANCELAR"/>
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnRegistrar"
-            android:layout_width="0dp"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_edad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Edad"
+                android:paddingRight="4dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_edad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_peso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Peso (kg)"
+                android:paddingRight="4dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_peso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="6"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+ <!--           <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_tamanio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Tamaño (cm)">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_tamanio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="4"/>
+            </com.google.android.material.textfield.TextInputLayout> -->
+
+        </LinearLayout>
+
+ <!--       <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="5"
-            android:text="Registrar"/>
+            android:text="Color"
+            android:layout_marginTop="8dp"/>
+        <Spinner
+            android:id="@+id/sp_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/color"/> -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado"
+            android:layout_marginTop="8dp"/>
+        <Spinner
+            android:id="@+id/sp_estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/estado"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Propósito"
+            android:layout_marginTop="8dp"/>
+        <Spinner
+            android:id="@+id/sp_proposito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/proposito"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_numeroLote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Número de Lote">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_numeroLote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_madre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Madre (código)"
+                android:paddingRight="4dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_madre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="10"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_padre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Padre (código)"
+                android:paddingRight="4dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_padre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="10"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción (opcional)"
+            android:paddingTop="8dp"/>
+
+        <EditText
+            android:id="@+id/et_descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:inputType="text|textMultiLine"
+            android:gravity="top"
+            android:maxLength="100"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btncancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:layout_marginEnd="5dp"
+                android:text="CANCELAR"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegistrar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Registrar"/>
+        </LinearLayout>
+
     </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
 
 
 </LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:id="@+id/table_reproductivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tv_reg1"
+                android:text="Fecha"
+                android:padding="3dip"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"/>
+            <TextView
+                android:id="@+id/tv_reg2"
+                android:text="Género Cria"
+                android:padding="3dip"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5" />
+            <TextView
+                android:id="@+id/tv_reg4"
+                android:text="Estado"
+                android:padding="3dip"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5" />
+            <TextView
+                android:id="@+id/tv_reg3"
+                android:text="Observación"
+                android:padding="3dip"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

@@ -8,6 +8,14 @@
     android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,8 +28,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="70dp"
-
+            android:layout_marginTop="40dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp"
             android:id="@+id/cv_consulta"
@@ -36,7 +43,9 @@
                 android:layout_gravity="bottom"
                 android:background="#FFFFFF"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:padding="8dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -61,10 +70,11 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="40dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp"
-            android:id="@+id/cv_ingresar">
+            android:id="@+id/cv_registrar"
+            >
 
 
             <LinearLayout
@@ -74,7 +84,9 @@
                 android:layout_gravity="bottom"
                 android:background="#FFFFFF"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:padding="8dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -106,20 +118,65 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="40dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp"
-            android:id="@+id/cv_actualizar">
+            android:id="@+id/cv_galeria"
+            android:background="@drawable/icon_buscar">
+
+
 
             <LinearLayout
+                android:id="@+id/ll_galeria"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:background="#FFFFFF"
                 android:orientation="vertical"
                 android:padding="8dp"
-                >
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true">
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:src="@drawable/icon_gallery" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="Galeria"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="160dp"
+            android:layout_height="180dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:id="@+id/cv_agendar"
+            >
+
+
+            <LinearLayout
+                android:id="@+id/ll_agendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -137,24 +194,78 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
         <com.google.android.material.card.MaterialCardView
             android:layout_width="160dp"
             android:layout_height="180dp"
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="40dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp"
-            android:id="@+id/cv_reporte">
+            android:id="@+id/cv_acerca_de"
+            >
 
             <LinearLayout
+                android:id="@+id/ll_acerda_de"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:background="#FFFFFF"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:padding="8dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:src="@drawable/ic_information" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="Acerca de"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="160dp"
+            android:layout_height="180dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:id="@+id/cv_reporte"
+            >
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/ll_ajustes">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -174,7 +285,8 @@
 
     </LinearLayout>
 
-
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>
 <!--
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

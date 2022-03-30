@@ -1,13 +1,56 @@
 <resources>
-    <string name="app_name">BIOTEC</string>
+    <!--string name="app_name">BIOTEC</string> -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">ControlVet-7B</string>
+    <string name="nav_header_subtitle">Control Veterinario</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">AJUSTES</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_gallery">Galeria</string>
+    <string name="menu_slideshow">Acerca de</string>
+
+    <string-array name="parametros">
+        <item>Código</item>
+        <item>Especie</item>
+        <item>Raza</item>
+    </string-array>
+    <string-array name="especie">
+        <item>Bovino</item>
+    </string-array>
+    <string-array name="raza">
+        <item>Brahman</item>
+        <item>Holstein</item>
+        <item>Gyr</item>
+        <item>Criollo</item>
+        <item>Indobrasil</item>
+        <item>Pardo suizo</item>
+        <item>Otro</item>
+    </string-array>
+    <string-array name="estado">
+        <item>Vacia</item>
+        <item>Preñada</item>
+        <item>En celo</item>
+    </string-array>
+    <string-array name="color">
+        <item>Blanco</item>
+        <item>Negro</item>
+        <item>Café</item>
+        <item>Mestizo</item>
+    </string-array>
+    <string-array name="estado_parto">
+        <item>Concepcion</item>
+        <item>Parto</item>
+        <item>Aborto</item>
+    </string-array>
+    <string-array name="inseminacion">
+        <item>Natural</item>
+        <item>Artificial</item>
+    </string-array>
+    <string-array name="proposito">
+        <item>Carne</item>
+        <item>Leche</item>
+        <item>Doble propósito</item>
+    </string-array>
 </resources>
