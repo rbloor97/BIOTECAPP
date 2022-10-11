@@ -1,5 +1,7 @@
 # BIOTECAPP
 
+JAVA + ANDROID STUDIO + SQLITE
+
 Application created for the subject of Biotechnology of the Technical University of Babahoyo in order to manage cattle, cattle and horses.
 This app allows:
 
